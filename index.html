@@ -1,207 +1,397 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <title>Omar Atta Y M</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
- .responsive-img {
-        width: 100%;
-           height: 385px; /* Hauteur fixe */
-    }
-
-    }
-    .contact-button {
-      display: inline-block;
-      background-color: #0d6efd;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      margin-top: 15px;
-    }
-    .cover-contact {
-      margin-top: 20px;
-    }
-    .cover-contact p {
-      margin: 5px 0;
-    }
-    .iconbutton {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #0d6efd;
-      padding: 10px;
-      border-radius: 50%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Omar Atta Y M | Développeur IA & Logiciel Freelance</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-   <!-- COUVERTURE -->
-    <div class="cover float" id="cover">
-        <img class="cover-profile round-image float" src="WhatsApp Image 2025-08-03 à 15.08.44_50c4ff3a.jpg"/>
-          <h1 id="typewriter">Omar Atta Y M</h1>
-        <p <h4 id="typewriter">Développeur IA && Logiciel Freelance | 4 ans d'expérience </h4></p>
+    <div class="cover" id="cover">
+        <img class="cover-profile round-image" src="WhatsApp Image 2025-08-03 à 15.08.44_50c4ff3a.jpg" alt="Photo de profil"/>
+        
+        <h1 id="typewriter">Omar Atta Y M</h1>
+        <p class="h4" style="color: var(--accent-color);">Développeur IA & Logiciel Freelance | 4 ans d'expérience</p>
 
         <div style="text-align: center;">
             <a class="contact-button" href="mailto:attaomar66@gmail.com?subject=Contact%20depuis%20omaratta.com">ME CONTACTER</a>
         </div>
+        
         <div class="cover-contact">
-            <p  class="contact-item">
-                <img class="envelope-icon" src="envelope.png" alt="Envelope Icon"/>
+            <p class="contact-item">
+                <i class="fas fa-envelope" style="color: white; font-size: 22px; margin-right: 8px;"></i>
                 <a href="mailto:attaomar66@gmail.com?subject=Contact%20depuis%20omaratta.com">attaomar66@gmail.com</a>
             </p>
             <p class="contact-item">
-                <img class="phone-icon" src="phone.png" alt="Phone Icon"/>
+                <i class="fas fa-phone" style="color: white; font-size: 22px; margin-right: 8px;"></i>
                 <a href="tel:+21699803190">06 12 34 56 78</a>
+            </p>
+            <p class="contact-item">
+                <i class="fab fa-whatsapp" style="color: white; font-size: 22px; margin-right: 8px;"></i>
+                <a href="https://wa.me/393287210929?text=Bonjour,%20j'ai%20vu%20votre%20portfolio%20et%20je%20souhaiterais%20discuter%20d'un%20projet." target="_blank">+33 6 12 34 56 78 (WhatsApp)</a>
             </p>
         </div>
     </div>
 
-  <!-- SECTION GRISE 1 -->
-  <div class="section bg-light text-center p-4">
-    <p id="subtitle">Je développe <b>votre projet IA & WEB</b> ou vos <b>Applications mobiles</b> iOS/Android de A à Z</p>
-  </div>
-
-  <!-- SECTION BLANCHE -->
-  <div class="container py-5">
-    <div class="row align-items-center">
-      <div class="col-md-4">
-        <img src="WhatsApp Image 2025-08-03 à 15.08.44_50c4ff3a.jpg" class="img-fluid rounded">
-      </div>
-      <div class="col-md-8">
-        <h2>En savoir plus</h2>
-        <p id="subtitle">
-          Passionné par la programmation depuis le plus jeune âge, je suis maintenant développeur professionnel avec plus de 4 ans d’expérience.<br><br>
-          Expert dans les domaines du <b>web</b>, de <b>l'intelligence artificielle (IA)</b> et des <b>applications mobiles</b>, je propose mes services personnalisés pour des missions freelance.
-        </p>
-        <a href="https://www.linkedin.com/in/omaratta-805a36344" target="_blank" class="btn btn-outline-primary">Voir mon profil LinkedIn</a>
-      </div>
+    <div class="section-intro">
+        <p id="subtitle">Je développe <b>votre projet IA & WEB</b> ou vos <b>Applications mobiles</b> iOS/Android de A à Z</p>
     </div>
-  </div>
 
-  <!-- PORTFOLIO -->
-  <div class="section bg-light py-5">
-    <div class="container">
-      <h2 class="text-center mb-5">Portfolio</h2>
-      <div class="row g-4">
-
-        <!-- Projet 1 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="project1small.jpg" class="responsive-img card-img-top" alt="Site Restaurant">
-            <div class="card-body">
-              <h5 class="card-title">Site web pour un restaurant</h5>
-              <p class="card-text">Un site vitrine moderne et responsive pour présenter un restaurant et son menu.</p>
-              <a href="portfolio-site-restaurant.html" class="btn btn-primary w-100">Voir le projet</a>
+    <div class="container py-5 section" id="about">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="main.png" class="img-fluid rounded about-image" alt="Image de travail">
             </div>
-          </div>
-        </div>
-
-        <!-- Projet 2 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="Capture d’écran_7-3-2025_04925_burgerhouse-gg19.onrender.com.jpeg" class="responsive-img card-img-top" alt="Burger House">
-            <div class="card-body">
-              <h5 class="card-title">Burger House</h5>
-              <p class="card-text">Site e-commerce pour commandes de burgers avec design moderne et rapide.</p>
-              <a href="siteburger.html" class="btn btn-primary w-100">Voir le projet</a>
+            <div class="col-md-8 about-text mt-4 mt-md-0">
+                <h2>À Propos de Moi</h2>
+                <p id="subtitle">
+                    Passionné par la programmation depuis le plus jeune âge, je suis maintenant développeur professionnel avec plus de 4 ans d’expérience.<br><br>
+                    Expert dans les domaines du <b>web</b>, de <b>l'intelligence artificielle (IA)</b> et des <b>applications mobiles</b>, je propose mes services personnalisés pour des missions freelance. Mon approche est axée sur la qualité, la performance et l'intégration de solutions innovantes inspirées par l'énergie et la créativité du continent africain.
+                </p>
+                <a href="https://www.linkedin.com/in/omaratta-805a36344" target="_blank" class="btn btn-primary mt-3" style="background-color: var(--primary-color); border-color: var(--primary-color);">
+                    <i class="fab fa-linkedin me-2"></i> Voir mon profil LinkedIn
+                </a>
             </div>
-          </div>
         </div>
-
-        <!-- Projet 3 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="Capture d’écran_7-3-2025_05039_convinum.onrender.com.jpeg" class="responsive-img card-img-top" alt="Convinium">
-            <div class="card-body">
-              <h5 class="card-title">Convinium</h5>
-              <p class="card-text">Une plateforme pour réserver et organiser des événements.</p>
-              <a href="convinium.html" class="btn btn-primary w-100">Voir le projet</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projet 4 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="blogc.jpeg" class="responsive-img card-img-top" alt="Blog éducatif">
-            <div class="card-body">
-              <h5 class="card-title">Blog éducatif</h5>
-              <p class="card-text">Un blog interactif pour partager des cours, tutoriels et articles techniques.</p>
-              <a href="blog.html" class="btn btn-primary w-100">Voir le projet</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projet 5 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="project2small.jpg" class="responsive-img card-img-top" alt="App IA">
-            <div class="card-body">
-              <h5 class="card-title">Application mobile IA</h5>
-              <p class="card-text">Application mobile intégrant de l'intelligence artificielle.</p>
-              <a href="portfolio-application-mobile-ai.html" class="btn btn-primary w-100">Voir le projet</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projet 6 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="Capture d’écran_7-3-2025_1477_huggingface.co.jpeg" class="responsive-img card-img-top" alt="Web IA">
-            <div class="card-body">
-              <h5 class="card-title">Application Web IA</h5>
-              <p class="card-text">Une application web basée sur des modèles IA pour générer les légendes des images.</p>
-              <a href="siteimage.html" class="btn btn-primary w-100">Voir le projet</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projet 7 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="Capture d’écran_7-3-2025_25618_chatbot-for-own-data.xs6r134s1i6.us-east.codeengine.appdomain.cloud.jpeg" class="responsive-img card-img-top" alt="Chatbot">
-            <div class="card-body">
-              <h5 class="card-title">Chatbot entreprise</h5>
-              <p class="card-text">Un chatbot intelligent d'assistance personnel pour  entreprise.</p>
-              <a href="chatbotpdf.html" class="btn btn-dark w-100">Voir le projet</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projet 8 -->
-        <div class="col-md-4">
-          <div class="card shadow-sm h-100">
-            <img src="Capture d’écran_3-8-2025_24650_suptechchatbot.onrender.com.jpeg" class="responsive-img card-img-top" alt="SupTech Chatbot">
-            <div class="card-body">
-              <h5 class="card-title">SupTech Chatbot</h5>
-              <p class="card-text">Chatbot de support étudiant et client pour une université.</p>
-              <a href="suptechchatbot.html" class="btn btn-primary w-100">Voir le projet</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </div>
-  </div>
+    <!-- SECTION DIGITALISATION & SERVICES -->
+<section class="section" id="digitalisation" style="background-color: var(--light-bg);">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: var(--primary-color);">
+                <i class="fas fa-rocket me-2"></i> Numérisez Votre Activité
+            </h2>
+            <div class="row align-items-center">
+                
+                <div class="col-md-6 order-md-2 text-center"> 
+                    <h4 class="mb-3" style="color: var(--dark-bg);">Ma Certification Spécialisée en Developpement Logiciel && IA</h4>
+                    <p class="small text-muted mb-4">Mon expertise est prouvée et certifiée par IBM / Coursera.</p>
+                    
+                    <a href="https://www.credly.com/badges/84bc6f03-87d3-4fc6-b3dd-c67a48f70d2a/public_url" target="_blank" style="text-decoration: none; display: inline-block;">
+                        <img src="ibm.png" class="img-fluid p-2" alt="Badge IBM AI Engineering" style="max-height: 180px; border: 3px solid var(--primary-color); border-radius: 12px;">
+                    </a>
+                       <a href="https://www.credly.com/badges/b5b05f89-e8e7-48a4-b96d-f73b05b33f1f/public_url" target="_blank" style="text-decoration: none; display: inline-block;">
+                        <img src="ia.png" class="img-fluid p-2" alt="Badge IBM AI Engineering" style="max-height: 180px; border: 3px solid var(--primary-color); border-radius: 12px;">
+                    </a>
+                    
+                    <p class="small text-muted mt-2 mb-4">
+                        Cliquez sur le badge pour <span style="font-weight: bold;">vérifier la certification</span> sur Credly.
+                    </p>
 
-  <!-- ICON BOUTON RETOUR HAUT -->
-  <div class="iconbutton">
-    <a href="#cover">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="white" width="32px">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11.25l-3-3-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    </a>
-  </div>
+                    <p class="mt-4">
+                        <a href="cv.pdf" target="_blank" class="btn btn-sm rounded-pill" style="background-color: var(--accent-color); color: var(--dark-bg); border-color: var(--accent-color);">
+                            <i class="fas fa-file-pdf me-2"></i> Télécharger Mon CV(PDF)
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-md-6 order-md-1 mt-4 mt-md-0">
+                    <h3>De l'idée à la solution digitale complète.</h3>
+                    <p class="lead">
+                        **Je m'engage à transformer et numériser intégralement** vos projets, entreprises et magasins, en créant des outils performants qui optimisent votre croissance et votre rentabilité.
+                    </p>
+                    <div class="texte-avec-ligne-verticale" style="margin-left: 20px;">
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle me-2" style="color: var(--accent-color);"></i> **Gestion de Stock & ERP :** Je conçois des applications de gestion (ERP, CRM) pour rationaliser vos opérations internes.
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle me-2" style="color: var(--accent-color);"></i> **E-commerce & Web :** Je crée des plateformes e-commerce performantes et des sites web vitrine pour maximiser votre présence en ligne.
+                            </li>
+                            <li class="mb-3">
+                                <i class="fas fa-check-circle me-2" style="color: var(--accent-color);"></i> **Assistance Clientèle Intelligente :** J'intègre des solutions d'IA conversationnelle pour un support client 24/7.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-light" id="skills">
+        <div class="container">
+            <h2 class="text-center mb-5">
+                <i class="fas fa-tools me-2"></i> Mes Compétences Techniques
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <i class="fas fa-brain skills-icon"></i>
+                        <h5>Intelligence Artificielle & Data Science</h5>
+                        <p class="text-muted small">Deep Learning, NLP, RAG, Chatbots, TensorFlow, PyTorch, LangChain,N8N.</p>
+                        <div class="progress" role="progressbar" aria-label="IA progress" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+              <div class="col-md-4">
+                    <div class="skill-box">
+                        <i class="fas fa-desktop skills-icon"></i> 
+                        <h5>Conception de Solutions Métiers & E-commerce</h5>
+                        <p class="text-muted small">
+                            Développement sur mesure d'applications de **gestion de stock, d'ERP/CRM, de sites web e-commerce,** et de plateformes d'assistance clientèle.
+                        </p>
+                        <div class="progress" role="progressbar" aria-label="Business Solutions progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <i class="fas fa-mobile-alt skills-icon"></i>
+                        <h5>Applications Mobiles (Cross-Platform)</h5>
+                        <p class="text-muted small">Flutter/Dart, Android/iOS natif, Firebase, intégration d'IA mobile (TFLite).</p>
+                        <div class="progress" role="progressbar" aria-label="Mobile progress" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-center mt-5 mb-4" style="color: var(--primary-color);">Outils & Plateformes</h3>
+            <div class="row justify-content-center g-3">
+                <div class="col-auto"><span class="badge bg-primary">Python/Flask/Django/Gradio/Streamlit</span></div>
+                <div class="col-auto"><span class="badge bg-secondary">PHP/Laravel/Symfony</span></div>
+                <div class="col-auto"><span class="badge bg-success">JavaScript/TypeScript/Angular/React/Next.js</span></div>
+                <div class="col-auto"><span class="badge bg-info text-dark">HTML/CSS/Bootstrap</span></div>
+                <div class="col-auto"><span class="badge bg-warning text-dark">Wordpress/Shopify/Str Api</span></div>
+                                <div class="col-auto"><span class="badge bg-warning text-dark">Flutter/Dart/Android/iOS</span></div>
+                <div class="col-auto"><span class="badge bg-danger">MySQL/PostgreSQL/SQLite/SQLsever</span></div>
+                <div class="col-auto"><span class="badge bg-danger">Git/GitHub</span></div>
+                <div class="col-auto"><span class="badge bg-dark">Docker/Kubernetes</span></div>
+                <div class="col-auto"><span class="badge bg-primary">Cloud/IBM Cloud/AWS/Render/Pythonanywhere/Infinityfree</span></div>
+           
+            </div>
+        </div>
+    </section>
+
+    <section class="section py-5" id="portfolio" style="background-color: white;">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5" style="color: var(--dark-bg);">
+                <i class="fas fa-project-diagram me-2"></i> Portfolio | Mes Réalisations
+            </h2>
+            <div class="row g-4 project-grid"> 
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-lg h-100 project-card" data-aos="zoom-in" data-aos-duration="800">
+                        <img src="project1small.jpg" class="responsive-img card-img-top" alt="Site Restaurant"> 
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Site web pour un restaurant</h5>
+                            <p class="card-text text-secondary">Un site vitrine moderne et responsive pour présenter un restaurant et son menu.</p>
+                                                      <div class="project-tags mb-3">
+                                <span class="badge bg-info text-dark">HTML/CSS</span>
+                                <span class="badge bg-warning text-dark">Python</span>
+                                <span class="badge bg-primary">Django</span>
+                                <span class="badge bg-success">Héroku</span>
+                                
+                            </div>
+
+                            <a href="portfolio-site-restaurant.html" class="btn btn-outline-dark w-100 mt-2 rounded-pill">
+                                Voir le projet <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-lg h-100 project-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                        <img src="Capture d’écran_7-3-2025_25618_chatbot-for-own-data.xs6r134s1i6.us-east.codeengine.appdomain.cloud.jpeg" class="responsive-img card-img-top" alt="Chatbot">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Chatbot entreprise (RAG/NLP)</h5>
+                            <p class="card-text text-secondary">Un chatbot intelligent d'assistance personnel pour entreprise (RAG/NLP).</p>
+                            <div class="project-tags mb-3">
+                                <span class="badge bg-success">Python</span>
+                                <span class="badge bg-danger">LLM/IA</span>
+                                <span class="badge bg-secondary">LangChain</span>
+                            </div>
+                            <a href="chatbotpdf.html" class="btn btn-outline-dark w-100 mt-2 rounded-pill">
+                                Voir le projet <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-lg h-100 project-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                        <img src="Capture d’écran_7-3-2025_04925_burgerhouse-gg19.onrender.com.jpeg" class="responsive-img card-img-top" alt="Burger House">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Burger House (E-commerce)</h5>
+                            <p class="card-text text-secondary">Site e-commerce pour commandes de burgers avec design moderne et rapide.</p>
+                            <div class="project-tags mb-3">
+                             <span class="badge bg-info text-dark">HTML/CSS</span>
+                                <span class="badge bg-warning text-dark">JavaScript</span>
+                                <span class="badge bg-primary">PHP</span>
+                                <span class="badge bg-success">Ajax</span>
+                                <span class="badge bg-danger">Render</span>
+                            </div>
+                            <a href="siteburger.html" class="btn btn-outline-dark w-100 mt-2 rounded-pill">Voir le projet <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-lg h-100 project-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                        <img src="Capture d’écran_7-3-2025_05039_convinum.onrender.com.jpeg" class="responsive-img card-img-top" alt="Convinium">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Convinium (Événements)</h5>
+                            <p class="card-text text-secondary">Une plateforme pour réserver et organiser des événements (Full-Stack).</p>
+                                                       <div class="project-tags mb-3">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-secondary">CSS</span>
+                                <span class="badge bg-success">JavaScript</span>
+                                <span class="badge bg-danger">jQuery</span>
+                                <span class="badge bg-info text-dark">PHP</span>
+                                <span class="badge bg-warning text-dark">MySQL</span>
+                           
+                            </div>
+                            
+                 
+
+                            <a href="convinium.html" class="btn btn-outline-dark w-100 mt-2 rounded-pill">Voir le projet <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-lg h-100 project-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                        <img src="cabinet.jpeg" class="responsive-img card-img-top" alt="Cabinet Medical">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Cabinet Médical (WP/SEO)</h5>
+                            <p class="card-text text-secondary">Un site web moderne pour un cabinet médical, optimisé pour le référencement.</p>
+                                                       <div class="project-tags mb-3">
+                                <span class="badge bg-info text-dark">React</span>
+                                <span class="badge bg-success">Taillwind</span>
+                                <span class="badge bg-warning text-dark">Django</span>
+                                <span class="badge bg-danger">PostgreSQL</span>
+                                <span class="badge bg-secondary">Api DRF</span>
+                                <span class="badge bg-dark">Pythonanywhere</span>
+                            </div>
+                            
+
+                            <a href="cabinet.html" class="btn btn-outline-dark w-100 mt-2 rounded-pill">Voir le projet <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-lg h-100 project-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+                        <img src="hopgrids.jpeg" class="responsive-img card-img-top" alt="Commerce Électronique">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Hopgrids (E-commerce Shopify)</h5>
+                            <p class="card-text text-secondary">Site web pour commerce électronique (Shopify), avec un design optimisé.</p>
+                            <div class="project-tags mb-3">
+                                <span class="badge bg-info text-dark">Shopify</span>
+                                <span class="badge bg-warning text-dark">E-commerce</span>
+                            </div>
+                            <a href="hopgrids.html" class="btn btn-outline-dark w-100 mt-2 rounded-pill">Voir le projet <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-lg h-100 project-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                        <img src="myshop.jpeg" class="responsive-img card-img-top" alt="Myshop">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Myshop (E-commerce Laravel)</h5>
+                            <p class="card-text text-secondary">Un site e-commerce moderne Full-Stack, intégrant le paiement Stripe.</p>
+                            <div class="project-tags mb-3">
+                                <span class="badge bg-info text-dark">Laravel</span>
+                                <span class="badge bg-warning text-dark">Stripe API</span>
+                            </div>
+                            <a href="myshop.html" class="btn btn-outline-dark w-100 mt-2 rounded-pill">Voir le projet <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-lg h-100 project-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700">
+                        <img src="ocart.jpeg" class="responsive-img card-img-top" alt="Ocart">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Ocart (E-commerce Vue/Firebase)</h5>
+                            <p class="card-text text-secondary">Un site e-commerce moderne, utilisant Vue.js et Firebase pour le backend.</p>
+                           
+                            <div class="project-tags mb-3">
+                                <span class="badge bg-info text-dark">Next.js</span>
+                                 <span class="badge bg-danger">TypeScript</span>
+                                  <span class="badge bg-dark">Prisma ORM</span>
+                                <span class="badge bg-warning text-dark">PostgreSQL</span>
+                                <span class="badge bg-success">Docker</span>
+                            </div>
+                            
+
+                            <a href="ocart.html" class="btn btn-outline-dark w-100 mt-2 rounded-pill">Voir le projet <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-lg h-100 project-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="800">
+                        <img src="project2small.jpg" class="responsive-img card-img-top" alt="App IA">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Application mobile IA</h5>
+                            <p class="card-text text-secondary">Application mobile intégrant de l'intelligence artificielle (Flutter/TensorFlow Lite).</p>
+                            <div class="project-tags mb-3">
+                                <span class="badge bg-info text-dark">Flutter/Dart</span>
+                                <span class="badge bg-danger">TensorFlow Lite</span>
+                            </div>
+                            <a href="portfolio-application-mobile-ai.html" class="btn btn-outline-dark w-100 mt-2 rounded-pill">Voir le projet <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-lg h-100 project-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="900">
+                        <img src="Capture d’écran_7-3-2025_1477_huggingface.co.jpeg" class="responsive-img card-img-top" alt="Web IA">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Application Web IA (Génération de Légendes)</h5>
+                            <p class="card-text text-secondary">Une application web basée sur des modèles IA pour générer les légendes des images.</p>
+                                                     <div class="project-tags mb-3">
+                                <span class="badge bg-success">Python</span>
+                                <span class="badge bg-secondary">Gradio</span>
+                                <span class="badge bg-danger">Hugging Face</span>
+                            </div>
+
+                            <a href="siteimage.html" class="btn btn-outline-dark w-100 mt-2 rounded-pill">Voir le projet <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-lg h-100 project-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="1100">
+                        <img src="Capture d’écran_3-8-2025_24650_suptechchatbot.onrender.com.jpeg" class="responsive-img card-img-top" alt="SupTech Chatbot">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">SupTech Chatbot (Support Étudiant)</h5>
+                            <p class="card-text text-secondary">Chatbot de support étudiant et client pour une université (IA Conversationnelle).</p>
+                                                       <div class="project-tags mb-3">
+                                <span class="badge bg-danger text-dark">Angular</span>
+                                <span class="badge bg-success">Node.js</span>
+                                <span class="badge bg-danger">IA Conversationnelle</span>
+                              <span class="badge bg-dark">Open IA</span>
+                                <span class="badge bg-info text-dark">Express.js</span>
+                                <span class="badge bg-warning text-dark">RAG</span>
+                            </div>
+
+                            <a href="suptechchatbot.html" class="btn btn-outline-dark w-100 mt-2 rounded-pill">Voir le projet <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="iconbutton">
+        <a href="#cover">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="32px">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11.25l-3-3-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        </a>
+    </div>
 
   <!-- CONTACT FRAME -->
-  <iframe src="contact-frame.html" scrolling="no" style="width:100%; border:none; height:300px;"></iframe>
-
+   <iframe src="contact-frame.html" scrolling="no" style="width: 100%; border: none; height: 400px;"></iframe>
 
 
 <script>
