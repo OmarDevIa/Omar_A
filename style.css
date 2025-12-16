@@ -9,18 +9,24 @@
     --transition-speed: 0.3s;
 }
 
+/* African Inspired & Modernized Style */
+
+/* ... (Vos variables :root restent identiques) ... */
+
 * {
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
 
-body {
+/* ⚠️ CHANGEMENT : "Carrosserie" redevient "body" */
+body { 
     margin: 0;
     line-height: 1.6;
     color: var(--text-color);
     background-color: white;
 }
 
+/* ... (Le reste du CSS reste identique jusqu'à la fin) ... */
 /* === General & Typography === */
 a {
     color: var(--primary-color);
@@ -352,5 +358,45 @@ div
     .float img {
         border-radius: 0; /* Remove the rounded corners for smaller screens */
         box-shadow: none; /* Remove the shadow for smaller screens */
+    }
+}
+
+/* --- RÈGLES DE RESPONSIVENESS POUR MOBILE (AJOUTER À LA FIN) --- */
+@media (max-width: 768px) {
+    /* 1. La section de couverture s'adapte à la hauteur du contenu */
+    div.cover {
+        height: auto; 
+        padding-bottom: 30px;
+    }
+    
+    /* 2. Centrage du bloc de contact (téléphone, email, WhatsApp) */
+    div.cover-contact {
+        position: relative; /* Désactive la position absolue (haut-gauche) */
+        top: auto;
+        left: auto;
+        padding-top: 10px;
+        padding-left: 0;
+        border-left: none; /* Supprime la ligne d'accentuation en mode centré */
+        width: 100%;
+        margin-top: 20px;
+        text-align: center; /* Centre le texte */
+    }
+    
+    /* 3. Centrage des éléments (icône + texte) */
+    div.cover-contact p.contact-item {
+        justify-content: center; /* Utilise Flexbox pour centrer l'icône et le texte */
+    }
+
+    /* 4. Ajustement pour le profil (déjà centré par le CSS initial, mais s'adapte) */
+    img.cover-profile {
+        margin-bottom: 20px;
+    }
+}
+/* --- Correction de la hauteur de l'iframe sur mobile --- */
+@media (max-width: 768px) {
+    /* Augmenter TRES SIGNIFICATIVEMENT la hauteur de l'iframe pour qu'elle puisse contenir 
+       le contenu de contact empilé (image, texte, 3 blocs de boutons, footer) */
+    iframe {
+        height: 750px !important; /* J'augmente à 750px par sécurité. */
     }
 }
