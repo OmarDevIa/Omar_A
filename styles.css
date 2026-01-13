@@ -327,3 +327,70 @@ img.portfolio {
         display: block;
     }
 }
+  :root {
+            --primary-color: #A0522D; /* Sienna */
+            --accent-color: #FFD700; /* Or */
+            --light-bg: #F0F0E4; /* Blanc cassé/Beige */
+            --dark-bg: #1A3E5C; /* Indigo profond */
+        }
+
+        /* Correction de la balise <body> */
+        body {
+            background-color: var(--light-bg); 
+            padding-bottom: 0; 
+            margin: 0; 
+            font-family: 'Arial', sans-serif;
+        }
+        .section {
+            padding: 30px 20px;
+            padding-bottom: 30px; 
+        }
+        
+        .frame {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .frame-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        
+        /* Correction : Standardiser sur .contact-footer */
+        .contact-footer {
+            background-color: var(--dark-bg); 
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9rem;
+            width: 100%;
+            border-top: 3px solid var(--accent-color); 
+        }
+        .contact-footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* Styles Responsive pour Mobile (TRES IMPORTANT) */
+        @media (max-width: 768px) {
+            .texte-avec-ligne-verticale {
+                margin-left: 0 !important;
+                border-left: none; /* Supprime la ligne verticale sur mobile */
+                text-align: center;
+            }
+            .col-md-9 a.btn {
+                margin: 10px auto !important; 
+                display: block !important;
+                max-width: 80% !important; 
+            }
+            .col-md-3 {
+                margin-bottom: 20px; 
+            }
+            /* Assurez-vous que l'image est bien centrée sur mobile */
+             .col-md-3 img {
+                display: block;
+                margin: 0 auto;
+            }
+        }

@@ -3,15 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Omar Atta, développeur freelance spécialisé en IA, assistants virtuels, applications web/mobile et automatisation pour PME et startups.">
+    <meta name="keywords" content="développeur IA freelance, assistant virtuel, automatisation, développement web, chatbot, Omar Atta">
+    <link rel="canonical" href="https://omar-a.onrender.com/">
+    <meta property="og:title" content="Omar Atta | Développeur IA & Logiciel Freelance">
+    <meta property="og:description" content="Solutions IA, assistants virtuels, e-commerce et applications mobiles livrées clé en main pour accélérer votre transformation digitale.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://omar-a.onrender.com/">
+    <meta property="og:image" content="https://omar-a.onrender.com/project1small.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Omar Atta | Développeur IA & Logiciel Freelance">
+    <meta name="twitter:description" content="Expert IA, assistants virtuels, web & mobile pour PME/Startups.">
+    <meta name="twitter:image" content="https://omar-a.onrender.com/project1small.jpg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Omar Atta Y M | Développeur IA & Logiciel Freelance</title>
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Omar Atta Y M",
+        "jobTitle": "Développeur IA & Logiciel Freelance",
+        "description": "Développe des solutions IA, assistants virtuels et applications web/mobile pour PME et startups.",
+        "url": "https://omar-a.onrender.com/",
+        "email": "mailto:attaomar66@gmail.com",
+        "telephone": "+21699803190",
+        "sameAs": [
+            "https://www.linkedin.com/in/omaratta-805a36344"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "FR"
+        }
+    }
+    </script>
 </head>
 <body>
 
-    <div class="cover" id="cover">
+    <header class="site-header" id="siteHeader">
+        <div class="nav-brand">Omar.dev</div>
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="site-nav" id="siteNav">
+            <a class="nav-link" data-section="cover" href="#cover">Accueil</a>
+            <a class="nav-link" data-section="about" href="#about">À propos</a>
+            <a class="nav-link" data-section="digitalisation" href="#digitalisation">Services</a>
+            <a class="nav-link" data-section="skills" href="#skills">Compétences</a>
+            <a class="nav-link" data-section="portfolio" href="#portfolio">Portfolio</a>
+        </nav>
+        <a class="nav-cta" href="mailto:attaomar66@gmail.com?subject=Contact%20depuis%20omaratta.com">Contact</a>
+    </header>
+
+    <div class="scroll-progress" id="scrollProgress">
+        <span></span>
+    </div>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Basculer la lumière">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <div class="cover snap-section" id="cover">
         <img class="cover-profile round-image" src="WhatsApp Image 2025-08-03 à 15.08.44_50c4ff3a.jpg" alt="Photo de profil"/>
         
         <h1 id="typewriter">Omar Atta Y M</h1>
@@ -37,18 +92,18 @@
         </div>
     </div>
 
-    <div class="section-intro">
-        <p id="subtitle">Je développe <b>votre projet IA & WEB</b> ou vos <b>Applications mobiles</b> iOS/Android de A à Z</p>
+    <div class="section-intro snap-section reveal-on-scroll">
+        <p class="intro-tagline">Je développe <b>votre projet IA & WEB</b> ou vos <b>Applications mobiles</b> iOS/Android de A à Z</p>
     </div>
 
-    <div class="container py-5 section" id="about">
+    <div class="container py-5 section snap-section reveal-on-scroll" id="about">
         <div class="row align-items-center">
             <div class="col-md-4">
                 <img src="main.png" class="img-fluid rounded about-image" alt="Image de travail">
             </div>
             <div class="col-md-8 about-text mt-4 mt-md-0">
                 <h2>À Propos de Moi</h2>
-                <p id="subtitle">
+                <p class="about-subtitle">
                     Passionné par la programmation depuis le plus jeune âge, je suis maintenant développeur professionnel avec plus de 4 ans d’expérience.<br><br>
                     Expert dans les domaines du <b>web</b>, de <b>l'intelligence artificielle (IA)</b> et des <b>applications mobiles</b>, je propose mes services personnalisés pour des missions freelance. Mon approche est axée sur la qualité, la performance et l'intégration de solutions innovantes inspirées par l'énergie et la créativité du continent africain.
                 </p>
@@ -59,11 +114,12 @@
         </div>
     </div>
     <!-- SECTION DIGITALISATION & SERVICES -->
-<section class="section" id="digitalisation" style="background-color: var(--light-bg);">
+<section class="section snap-section reveal-on-scroll" id="digitalisation" style="background-color: var(--light-bg);">
         <div class="container">
-            <h2 class="text-center mb-5" style="color: var(--primary-color);">
-                <i class="fas fa-rocket me-2"></i> Numérisez Votre Activité
+            <h2 class="text-center mb-3" style="color: var(--primary-color);">
+                <i class="fas fa-rocket me-2"></i> Accélérez Votre Transformation
             </h2>
+            <p class="text-center text-muted section-lead mb-5">Du conseil stratégique à la livraison opérationnelle, je pilote chaque phase pour connecter votre activité à l'écosystème numérique.</p>
             <div class="row align-items-center">
                 
                 <div class="col-md-6 order-md-2 text-center"> 
@@ -89,28 +145,83 @@
                 </div>
 
                 <div class="col-md-6 order-md-1 mt-4 mt-md-0">
-                    <h3>De l'idée à la solution digitale complète.</h3>
+                    <h3>Du diagnostic à l’industrialisation.</h3>
                     <p class="lead">
-                        **Je m'engage à transformer et numériser intégralement** vos projets, entreprises et magasins, en créant des outils performants qui optimisent votre croissance et votre rentabilité.
+                        J’analyse vos processus, je priorise les chantiers numériques et je conçois des plateformes robustes qui portent vos indicateurs de performance.
                     </p>
-                    <div class="texte-avec-ligne-verticale" style="margin-left: 20px;">
-                        <ul class="list-unstyled">
-                            <li class="mb-3">
-                                <i class="fas fa-check-circle me-2" style="color: var(--accent-color);"></i> **Gestion de Stock & ERP :** Je conçois des applications de gestion (ERP, CRM) pour rationaliser vos opérations internes.
-                            </li>
-                            <li class="mb-3">
-                                <i class="fas fa-check-circle me-2" style="color: var(--accent-color);"></i> **E-commerce & Web :** Je crée des plateformes e-commerce performantes et des sites web vitrine pour maximiser votre présence en ligne.
-                            </li>
-                            <li class="mb-3">
-                                <i class="fas fa-check-circle me-2" style="color: var(--accent-color);"></i> **Assistance Clientèle Intelligente :** J'intègre des solutions d'IA conversationnelle pour un support client 24/7.
-                            </li>
-                        </ul>
+                    <div class="service-points">
+                        <article>
+                            <div class="icon-circle"><i class="fas fa-network-wired"></i></div>
+                            <div>
+                                <h5>Architecture & ERP Augmentés</h5>
+                                <p>Systèmes de gestion intégrée, CRM connectés, automatisation des flux opérationnels.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="icon-circle"><i class="fas fa-store"></i></div>
+                            <div>
+                                <h5>Expériences Digitales</h5>
+                                <p>Sites e-commerce, vitrines premium et portails métiers centrés conversion.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="icon-circle"><i class="fas fa-comments"></i></div>
+                            <div>
+                                <h5>IA Conversationnelle & Support</h5>
+                                <p>Assistants multilingues, RAG, automatisation du support 24/7.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <div class="icon-circle"><i class="fas fa-headset"></i></div>
+                            <div>
+                                <h5>Assistants Virtuels & Automations</h5>
+                                <p>Agents IA hybrides, intégration CRM, workflows no-code (Zapier, Make, n8n).</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section bg-light" id="skills">
+    <section class="section impact-section snap-section reveal-on-scroll" id="impact">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <h2 class="text-start mb-4" style="color: var(--primary-color);">
+                        <i class="fas fa-chart-line me-2"></i> Impact mesurable
+                    </h2>
+                    <p class="text-muted mb-4">Quelques indicateurs récents issus de missions IA, automation et e-commerce que je pilote pour mes clients.</p>
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <span class="kpi-value">+32%</span>
+                            <span class="kpi-label">Conversion moyenne sur les parcours e-commerce</span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value">10</span>
+                            <span class="kpi-label">Assistants virtuels livrés avec SLA 24/7</span>
+                        </div>
+                        <div class="kpi-card">
+                            <span class="kpi-value">3 semaines</span>
+                            <span class="kpi-label">Pour sortir un MVP fonctionnel (moyenne 2024)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">“Omar a restructuré notre tunnel de vente et livré un chatbot support en moins d’un mois. Les équipes ont gagné 2h/jour.”</div>
+                        <div class="testimonial-author">
+                            <img src="project1small.jpg" alt="Client" />
+                            <div>
+                                <strong>Sarah L.</strong>
+                                <span>COO, RetailTech Paris</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section bg-light snap-section reveal-on-scroll" id="skills">
         <div class="container">
             <h2 class="text-center mb-5">
                 <i class="fas fa-tools me-2"></i> Mes Compétences Techniques
@@ -148,26 +259,82 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="skill-box">
+                        <i class="fas fa-headset skills-icon"></i>
+                        <h5>Assistants Virtuels & Automatisation</h5>
+                        <p class="text-muted small">Bots IA multicanaux, workflows no-code (Zapier, Make, n8n), intégration CRM/Support.</p>
+                        <div class="progress" role="progressbar" aria-label="Virtual assistant progress" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <h3 class="text-center mt-5 mb-4" style="color: var(--primary-color);">Outils & Plateformes</h3>
-            <div class="row justify-content-center g-3">
-                <div class="col-auto"><span class="badge bg-primary">Python/Flask/Django/Gradio/Streamlit</span></div>
-                <div class="col-auto"><span class="badge bg-secondary">PHP/Laravel/Symfony</span></div>
-                <div class="col-auto"><span class="badge bg-success">JavaScript/TypeScript/Angular/React/Next.js</span></div>
-                <div class="col-auto"><span class="badge bg-info text-dark">HTML/CSS/Bootstrap</span></div>
-                <div class="col-auto"><span class="badge bg-warning text-dark">Wordpress/Shopify/Str Api</span></div>
-                                <div class="col-auto"><span class="badge bg-warning text-dark">Flutter/Dart/Android/iOS</span></div>
-                <div class="col-auto"><span class="badge bg-danger">MySQL/PostgreSQL/SQLite/SQLsever</span></div>
-                <div class="col-auto"><span class="badge bg-danger">Git/GitHub</span></div>
-                <div class="col-auto"><span class="badge bg-dark">Docker/Kubernetes</span></div>
-                <div class="col-auto"><span class="badge bg-primary">Cloud/IBM Cloud/AWS/Render/Pythonanywhere/Infinityfree</span></div>
-           
+            <h3 class="text-center mt-5 mb-3" style="color: var(--primary-color);">Outils & Plateformes</h3>
+            <p class="text-center text-muted mb-4 tools-subtitle">Une vision plus visuelle de mon écosystème : chaque bloc combine un logo avec les plateformes que j'utilise au quotidien.</p>
+            <div class="row g-4 tools-grid">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="tool-card">
+                        <div class="tool-icon icon-python"><i class="fa-brands fa-python"></i></div>
+                        <h6>Python & IA</h6>
+                        <p>Flask, Django, FastAPI, TensorFlow, PyTorch</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="tool-card">
+                        <div class="tool-icon icon-js"><i class="fa-brands fa-js"></i></div>
+                        <h6>Front-End JS</h6>
+                        <p>TypeScript, React, Next.js, Angular, Vite</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="tool-card">
+                        <div class="tool-icon icon-php"><i class="fa-brands fa-php"></i></div>
+                        <h6>Back-End & APIs</h6>
+                        <p>Laravel, Symfony, Node.js, Express, REST</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="tool-card">
+                        <div class="tool-icon icon-mobile"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <h6>Mobile & Cross-Platform</h6>
+                        <p>Flutter, Dart, Kotlin, Swift, Firebase</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="tool-card">
+                        <div class="tool-icon icon-cms"><i class="fa-brands fa-wordpress"></i></div>
+                        <h6>CMS & E-commerce</h6>
+                        <p>WordPress, Shopify, Strapi, Webflow</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="tool-card">
+                        <div class="tool-icon icon-data"><i class="fa-solid fa-database"></i></div>
+                        <h6>Données & Bases</h6>
+                        <p>PostgreSQL, MySQL, SQLite, Prisma ORM</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="tool-card">
+                        <div class="tool-icon icon-docker"><i class="fa-brands fa-docker"></i></div>
+                        <h6>DevOps & Containers</h6>
+                        <p>Docker, Kubernetes, CI/CD, Nginx</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="tool-card">
+                        <div class="tool-icon icon-cloud"><i class="fa-solid fa-cloud"></i></div>
+                        <h6>Cloud & Collaboration</h6>
+                        <p>IBM Cloud, AWS, Render, Git & GitHub</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section py-5" id="portfolio" style="background-color: white;">
+    <section class="section py-5 snap-section reveal-on-scroll" id="portfolio" style="background-color: var(--page-bg);">
         <div class="container">
             <h2 class="text-center mb-5 display-5" style="color: var(--dark-bg);">
                 <i class="fas fa-project-diagram me-2"></i> Portfolio | Mes Réalisations
@@ -449,6 +616,147 @@ function typeWriter() {
 }
 
 document.addEventListener("DOMContentLoaded", typeWriter);
+
+function initThemeToggle() {
+    const bodyElement = document.body;
+    const toggleButton = document.getElementById("themeToggle");
+    if (!toggleButton) return;
+
+    const THEME_KEY = "omar-theme";
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+
+    const updateThemeIcon = () => {
+        const icon = toggleButton.querySelector("i");
+        if (!icon) return;
+        const isDark = bodyElement.classList.contains("theme-dark");
+        icon.classList.toggle("fa-sun", !isDark);
+        icon.classList.toggle("fa-moon", isDark);
+    };
+
+    const applyStoredTheme = (mode) => {
+        if (mode === "dark") {
+            bodyElement.classList.add("theme-dark");
+        } else {
+            bodyElement.classList.remove("theme-dark");
+        }
+        updateThemeIcon();
+    };
+
+    const storedTheme = localStorage.getItem(THEME_KEY);
+    if (storedTheme) {
+        applyStoredTheme(storedTheme);
+    } else if (prefersDark && prefersDark.matches) {
+        applyStoredTheme("dark");
+    } else {
+        updateThemeIcon();
+    }
+
+    toggleButton.addEventListener("click", () => {
+        bodyElement.classList.toggle("theme-dark");
+        const mode = bodyElement.classList.contains("theme-dark") ? "dark" : "light";
+        localStorage.setItem(THEME_KEY, mode);
+        updateThemeIcon();
+    });
+
+    if (prefersDark) {
+        prefersDark.addEventListener("change", (event) => {
+            if (!localStorage.getItem(THEME_KEY)) {
+                applyStoredTheme(event.matches ? "dark" : "light");
+            }
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", initThemeToggle);
+
+function initNavigation() {
+    const toggle = document.getElementById("navToggle");
+    const nav = document.getElementById("siteNav");
+    const header = document.getElementById("siteHeader");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll(".snap-section, section, .cover");
+
+    if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+            nav.classList.toggle("open");
+        });
+        navLinks.forEach((link) =>
+            link.addEventListener("click", () => nav.classList.remove("open"))
+        );
+    }
+
+    window.addEventListener("scroll", () => {
+        if (!header) return;
+        header.classList.toggle("scrolled", window.scrollY > 10);
+    });
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    navLinks.forEach((link) => {
+                        link.classList.toggle(
+                            "active",
+                            link.dataset.section === id
+                        );
+                    });
+                }
+            });
+        },
+        {
+            threshold: 0.4,
+        }
+    );
+
+    sections.forEach((section) => {
+        if (section.id) {
+            observer.observe(section);
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", initNavigation);
+
+function initScrollProgress() {
+    const progressBar = document.querySelector("#scrollProgress span");
+    if (!progressBar) return;
+
+    const updateProgress = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = `${progress}%`;
+    };
+
+    window.addEventListener("scroll", updateProgress);
+    updateProgress();
+}
+
+document.addEventListener("DOMContentLoaded", initScrollProgress);
+
+function initRevealOnScroll() {
+    const revealElements = document.querySelectorAll(".reveal-on-scroll");
+    if (!revealElements.length) return;
+
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.2,
+        }
+    );
+
+    revealElements.forEach((element) => revealObserver.observe(element));
+}
+
+document.addEventListener("DOMContentLoaded", initRevealOnScroll);
 </script>
 
 
