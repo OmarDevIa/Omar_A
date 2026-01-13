@@ -208,6 +208,14 @@ body.theme-dark .theme-toggle {
     transition: transform var(--transition-speed);
 }
 
+.nav-toggle.open span:first-child {
+    transform: rotate(45deg) translateY(5px);
+}
+
+.nav-toggle.open span:last-child {
+    transform: rotate(-45deg) translateY(-5px);
+}
+
 @media (max-width: 992px) {
     .site-header {
         padding: 14px 24px;

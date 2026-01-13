@@ -678,10 +678,14 @@ function initNavigation() {
 
     if (toggle && nav) {
         toggle.addEventListener("click", () => {
-            nav.classList.toggle("open");
+            const isOpen = nav.classList.toggle("open");
+            toggle.classList.toggle("open", isOpen);
         });
         navLinks.forEach((link) =>
-            link.addEventListener("click", () => nav.classList.remove("open"))
+            link.addEventListener("click", () => {
+                nav.classList.remove("open");
+                toggle.classList.remove("open");
+            })
         );
     }
 
