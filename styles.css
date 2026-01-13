@@ -240,6 +240,10 @@ img.portfolio {
 
 /* RESPONSIVE DESIGN : MOBILE */
 @media only screen and (max-width: 767px) {
+    iframe {
+        height: 750px;
+    }
+
     img.cover-profile {
         height: 90px;
         margin-top: 75px;
