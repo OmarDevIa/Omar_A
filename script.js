@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
 const titles = [
     "Omar Atta Y M",
     "Développeur IA & Logiciel Freelance",
+    "Développement Mobile (React Native, Flutter)",
+    "Intelligence Artificielle & Machine Learning",
+    "Full-Stack Web Development",
     "4 ans d'expérience"
 ];
 
