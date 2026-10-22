@@ -1,0 +1,71 @@
+# Omar Amadou Wankoye — Omar.tech
+
+> Développeur freelance : sites web, applications, automatisation IA, SEO & GEO, réseaux sociaux. France, Italie, Afrique francophone. Devis gratuit.
+
+Omar Amadou Wankoye (Omar A. Wankoye, également connu sous le nom d’Omar Atta sur Credly et LinkedIn) est développeur web freelance full-stack, 4 ans d’expérience, certifié IBM (Full Stack Software Developer, AI Developer, Front-End Developer) et Google (AI Professional Certificate). Il travaille à distance, en français et en anglais, pour des clients en : France, Italie, Belgique, Suisse, Côte d’Ivoire, Sénégal, Niger, Cameroun, Maroc, Remote international.
+
+## Services
+- [Création de sites web & e-commerce](https://www.omar-tech.com/creation-site-web.html): Sites vitrines, landing pages et boutiques en ligne rapides, responsive et pensés pour transformer vos visiteurs en clients.
+- [Développement d’applications web & mobiles](https://www.omar-tech.com/developpement-application-web-mobile.html): Applications métier, SaaS, plateformes de réservation et apps Android/iOS (Flutter) sur mesure, de la maquette à la mise en production.
+- [Automatisation & intelligence artificielle](https://www.omar-tech.com/automatisation-ia-workflows.html): Chatbots IA, assistants virtuels et workflows automatisés (n8n, Make, Zapier, API) pour gagner des heures chaque semaine.
+- [Référencement SEO & GEO](https://www.omar-tech.com/seo-geo-referencement.html): Être trouvé sur Google et cité par les IA (ChatGPT, Gemini, Perplexity) : audit, SEO technique, contenus et SEO local.
+- [Gestion des réseaux sociaux](https://www.omar-tech.com/gestion-reseaux-sociaux.html): Stratégie, création de contenus assistée par IA et publication sur Facebook, Instagram, LinkedIn et TikTok pour développer votre audience.
+
+## Certifications (vérifiables sur Credly)
+- [IBM Full Stack Software Developer](https://www.credly.com/badges/84bc6f03-87d3-4fc6-b3dd-c67a48f70d2a/public_url)
+- [IBM AI Developer](https://www.credly.com/badges/b5b05f89-e8e7-48a4-b96d-f73b05b33f1f/public_url)
+- [Google AI Professional Certificate](https://www.credly.com/badges/0d189f38-17e2-4161-90cc-b1ea2e641291/public_url) — Google · Coursera
+- [IBM Front-End Developer Professional Certificate](https://www.credly.com/badges/92a42052-d2ae-4959-82fd-6e01c23fcbed/public_url) — IBM · Coursera
+- [Google AI for App Building](https://www.credly.com/badges/8a7d78ea-1f9d-475b-8ad0-bc9dfc0aaf1c/public_url) — Google · Coursera
+- [Google AI for Content Creation](https://www.credly.com/badges/77dd9add-320b-4fa8-afda-0c356536d9b2/public_url) — Google · Coursera
+- [Building Generative AI-Powered Applications with Python](https://www.credly.com/badges/fc916346-e1f5-4927-8cbb-76a73aafd4d8/public_url) — IBM · Coursera
+- [Cloud Application Development Foundations](https://www.credly.com/badges/1ba3b351-f8a3-4e0f-af55-5c7ea98c5fe5/public_url) — IBM · Coursera
+- [JavaScript Programming Essentials](https://www.credly.com/badges/a667cf56-4771-4535-a3e1-214ee532ca4c/public_url) — IBM · Coursera
+- [Web Development with HTML, CSS, JavaScript Essentials](https://www.credly.com/badges/1fe0f625-a96f-4341-a155-510954a3008b/public_url) — IBM · Coursera
+- [Google AI for Writing and Communicating](https://www.credly.com/badges/bc6539db-bf86-4ef9-b491-8fcd0a85f103/public_url) — Google · Coursera
+- [Google AI for Brainstorming and Planning](https://www.credly.com/badges/00ff7da6-e4c1-4065-8d8b-5ba3e735eaf8/public_url) — Google · Coursera
+- [Google AI Fundamentals](https://www.credly.com/badges/66f44ae5-d1b9-4639-8ddd-4b95deb8b0d1/public_url) — Google · Coursera
+- [Profil Credly complet (43 badges)](https://www.credly.com/users/omar-atta-yakouba-maikassa)
+
+## Études de cas
+- [Cabinet médical — site & prise de rendez-vous](https://www.omar-tech.com/cabinet.html): Site moderne avec prise de rendez-vous en ligne et back-office autonome, optimisé pour le référencement local. Secteur : Santé. Technologies : React, Tailwind CSS, Django, Django REST Framework, PostgreSQL, PythonAnywhere.
+- [SupTech Chatbot — assistant IA pour une université](https://www.omar-tech.com/suptechchatbot.html): Chatbot de support étudiant et client, capable de répondre par texte et par entrée audio. Secteur : Éducation. Technologies : Node.js, Express, LangChain, OpenAI, Render.
+- [Myshop — boutique d’accessoires IT avec back-office](https://www.omar-tech.com/myshop.html): Application Django : catalogue, commande en ligne, bon de commande PDF et back-office produits / fournisseurs. Secteur : E-commerce. Technologies : Python, Django, Django REST Framework, SQLite, Jazzmin, CKEditor.
+- [Chatbot documentaire (RAG) pour une entreprise](https://www.omar-tech.com/chatbotpdf.html): Assistant IA qui comprend un document et répond aux questions des utilisateurs sur son contenu. Secteur : Gestion documentaire. Technologies : Python, Flask, LangChain, LLM, IBM Cloud, IBM Code Engine.
+- [Générateur de légendes d’images par IA](https://www.omar-tech.com/siteimage.html): Application web qui génère automatiquement des légendes précises pour accélérer la publication d’un journal. Secteur : Presse & édition. Technologies : Python, Gradio, Hugging Face, IBM Cloud, IBM watsonx.
+- [Application mobile IA — estimation de l’âge](https://www.omar-tech.com/portfolio-application-mobile-ai.html): Application mobile qui estime l’âge d’un utilisateur en analysant son visage grâce à l’IA. Secteur : Tech grand public. Technologies : Python, Kivy, IA, Android, iOS.
+- [Mocart — marketplace e-commerce multi-vendeurs](https://www.omar-tech.com/ocart.html): Intégration front-end complète d’une marketplace : boutique, comptes clients, espace vendeurs et tableau de bord. Secteur : E-commerce. Technologies : HTML5, CSS3, Bootstrap, JavaScript, ApexCharts, Render.
+- [Convinium — site de restaurant gastronomique](https://www.omar-tech.com/convinium.html): Site vitrine pour un restaurant français : menu filtrable, galerie, réservation de table et contact. Secteur : Restauration. Technologies : HTML5, CSS3, Bootstrap, JavaScript, Render.
+- [ShopGrids — boutique d’électronique](https://www.omar-tech.com/hopgrids.html): Intégration front-end d’une boutique d’électronique : catalogue, fiches produits, panier et paiement. Secteur : E-commerce. Technologies : HTML5, CSS3, Bootstrap, JavaScript, Render.
+- [Veppo — boutique de bijoux](https://www.omar-tech.com/veppo.html): Intégration front-end élégante d’une boutique de bijoux : collections, fiches produits, panier et paiement. Secteur : Mode & bijoux. Technologies : HTML5, CSS3, Bootstrap, JavaScript, Render.
+- [Pizzeria — site vitrine & menu](https://www.omar-tech.com/portfolio-site-restaurant.html): Site vitrine responsive pour une pizzeria, avec menu modifiable par le client. Secteur : Restauration. Technologies : Python, Django, HTML, CSS, PythonAnywhere.
+- [Burger House — menu en ligne](https://www.omar-tech.com/siteburger.html): Page menu responsive pour un fast-food : 6 catégories, photos, descriptions, options et prix. Secteur : Restauration. Technologies : HTML5, CSS3, Render.
+
+## Méthode
+1. Appel découverte gratuit
+2. Devis et plan d’action sous 48 h
+3. Réalisation par étapes avec démos
+4. Mise en ligne, formation et suivi
+
+## Questions fréquentes
+### Quels services propose Omar Amadou Wankoye ?
+Omar Amadou Wankoye est développeur web freelance. Il propose la création de sites web et e-commerce, le développement d’applications web et mobiles, l’automatisation et les chatbots IA, le référencement SEO et GEO, et la gestion des réseaux sociaux.
+
+### Travaillez-vous avec des clients à l’étranger ?
+Oui, tout se fait à distance : clients en France, en Italie, en Belgique, en Suisse et en Afrique francophone (Côte d’Ivoire, Sénégal, Niger, Cameroun, Maroc…), en français ou en anglais.
+
+### Combien coûte un projet ?
+Chaque projet fait l’objet d’un devis gratuit et détaillé, envoyé sous 48 h après un premier échange. Le prix dépend du périmètre, des fonctionnalités et des délais souhaités.
+
+### Vos compétences sont-elles certifiées ?
+Oui : IBM Full Stack Software Developer, IBM AI Developer, IBM Front-End Developer, Google AI Professional Certificate et plus de 40 badges vérifiables publiquement sur Credly.
+
+### Comment démarrer un projet ?
+Envoyez un message via le formulaire de contact ou WhatsApp en décrivant votre besoin. Un appel découverte gratuit permet ensuite de définir les objectifs, le planning et le budget.
+
+## Contact
+- Devis gratuit : https://www.omar-tech.com/#contact
+- E-mail : attaomar66@gmail.com
+- WhatsApp : +39 328 721 09 29
+- LinkedIn : https://www.linkedin.com/in/omaratta-805a36344
+- GitHub : https://github.com/OmarDevIa

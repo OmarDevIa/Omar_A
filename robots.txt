@@ -1,4 +1,87 @@
 User-agent: *
 Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
 
-Sitemap: https://omar-a.onrender.com/sitemap.xml
+User-agent: Googlebot
+Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
+
+User-agent: Bingbot
+Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
+
+User-agent: GPTBot
+Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
+
+User-agent: CCBot
+Allow: /
+Disallow: /_build/
+Disallow: /boot.html
+Disallow: /contact-frame.html
+Disallow: /portfolio-site-restaurant2.html
+
+Sitemap: https://www.omar-tech.com/sitemap.xml
+
+# Résumé du site pour les IA : https://www.omar-tech.com/llms.txt

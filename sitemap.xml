@@ -1,56 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://omar-a.onrender.com/</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/omar-atta-portrait.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/portfolio-site-restaurant.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/creation-site-web.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/chatbotpdf.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/developpement-application-web-mobile.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/siteburger.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/automatisation-ia-workflows.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/convinium.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/seo-geo-referencement.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/cabinet.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/gestion-reseaux-sociaux.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/hopgrids.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/cabinet.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/cabinet-medical-full.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/myshop.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/suptechchatbot.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/suptech-chatbot-full.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/ocart.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/myshop.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/myshop-full.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/portfolio-application-mobile-ai.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/chatbotpdf.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/chatbot-rag-full.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/siteimage.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/siteimage.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/legendes-images-ia-full.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/suptechchatbot.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/portfolio-application-mobile-ai.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/application-mobile-ia-full.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://omar-a.onrender.com/veppo.html</loc>
-    <lastmod>2026-01-13</lastmod>
+    <loc>https://www.omar-tech.com/ocart.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/ocart-full.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.omar-tech.com/convinium.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/convinium-full.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.omar-tech.com/hopgrids.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/shopgrids-full.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.omar-tech.com/veppo.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/veppo-full.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.omar-tech.com/portfolio-site-restaurant.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/restaurant-full.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://www.omar-tech.com/siteburger.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/burger-house-full.webp</image:loc></image:image>
   </url>
 </urlset>
