@@ -87,6 +87,20 @@ def build_sprite():
 SPRITE = None
 
 
+def load_css():
+    css = (ROOT / 'assets' / 'css' / 'main.css').read_text(encoding='utf-8')
+    css = css.replace('url("../fonts/', 'url("assets/fonts/')
+    css = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
+    css = re.sub(r'\s+', ' ', css)
+    css = re.sub(r'\s*([{};:,>])\s*', r'\1', css)
+    css = css.replace(';}', '}')
+    # rétablir les espaces significatifs dans les sélecteurs descendants « :hover .x » etc. déjà conservés
+    return css.strip()
+
+
+INLINE_CSS = ''
+
+
 def icon(name, cls='icon'):
     return f'<svg class="{cls}" aria-hidden="true" focusable="false"><use href="#i-{name}"/></svg>'
 
@@ -181,10 +195,10 @@ def head(title, desc, canonical, *, og_type='website', image=OG_IMAGE, image_alt
 <meta name="twitter:image" content="{image}">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/omar-atta-contact.webp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&display=swap">
-{preload}<link rel="stylesheet" href="assets/css/main.css">
+<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+{preload}<style>{INLINE_CSS}</style>
 <script>document.documentElement.classList.replace('no-js','js')</script>
 <script src="assets/js/main.js" defer></script>
 <script type="application/ld+json">{ld(site_graph())}</script>{blocks}
@@ -201,7 +215,6 @@ def header(home):
     links = '\n'.join(f'      <a href="{p}#{anchor}">{label}</a>' for label, anchor in NAV)
     mlinks = '\n'.join(f'      <a href="{p}#{anchor}" style="--i:{i}">{label}</a>' for i, (label, anchor) in enumerate(NAV + [('Contact', 'contact')]))
     return f'''<body>
-{SPRITE}
 <a class="skip-link" href="#main">Aller au contenu</a>
 <div class="progress" aria-hidden="true"></div>
 <header class="site-header">
@@ -272,6 +285,7 @@ def footer():
     </div>
   </div>
 </footer>
+{SPRITE}
 </body>
 </html>
 '''
@@ -279,6 +293,7 @@ def footer():
 
 def contact_block(heading_tag='h2'):
     return f'''<section class="section" id="contact" aria-labelledby="contact-title">
+  <div class="marquee mega-marquee" aria-hidden="true" style="border:0;background:none"><div class="marquee-track"><span>Votre projet mérite le meilleur</span><span>Devis gratuit sous 48 h</span><span>Votre projet mérite le meilleur</span><span>Devis gratuit sous 48 h</span></div></div>
   <div class="container">
     <div class="cta noise" data-reveal="scale">
       <p class="eyebrow">Contact</p>
@@ -332,6 +347,29 @@ def split_words(text_html_parts):
             out.append(f'<span class="w"><span style="--i:{i}">{inner}</span></span>')
             i += 1
     return ' '.join(out)
+
+
+def split_titles(html_out):
+    """Découpe les titres de section (h2.section-title, .cta h2) en mots animés."""
+    def conv(m):
+        open_tag, inner = m.group(1), m.group(2)
+        parts, i = [], 0
+        for seg in re.split(r'(<span class="[^"]+">.*?</span>)', inner):
+            if not seg:
+                continue
+            sm = re.match(r'<span class="([^"]+)">(.*?)</span>', seg)
+            cls, text = (sm.group(1), sm.group(2)) if sm else (None, seg)
+            for word in re.split(r'(\s+)', text):
+                if not word or word.isspace():
+                    if word:
+                        parts.append(' ')
+                    continue
+                inner_w = f'<span class="{cls}">{word}</span>' if cls else word
+                parts.append(f'<span class="w"><span style="--i:{i}">{inner_w}</span></span>')
+                i += 1
+        tag = open_tag.replace('class="', 'class="split ', 1) if 'class="' in open_tag else open_tag[:-1] + ' class="split">'
+        return tag + ''.join(parts).strip() + '</h2>'
+    return re.sub(r'(<h2[^>]*class="section-title"[^>]*>|<h2 id="contact-title">)(.*?)</h2>', conv, html_out, flags=re.S)
 
 
 def project_card(p, i=0, reveal=True):
@@ -399,14 +437,23 @@ def build_index():
     marquee = ''.join(f'<span>{e(t)}</span>' for t in STACK)
 
     out = head(C.PROFILE['seo_title'], C.PROFILE['seo_description'], f'{SITE}/', extra_ld=[faq_ld(C.GENERAL_FAQS)],
-               preload='<link rel="preload" as="image" href="img/omar-atta-portrait.webp" type="image/webp">\n')
+               preload='<link rel="preload" as="image" href="img/omar-atta-portrait.webp" imagesrcset="img/omar-atta-portrait-480.webp 360w, img/omar-atta-portrait-600.webp 600w, img/omar-atta-portrait.webp 720w" imagesizes="(max-width: 860px) 54vw, 440px" type="image/webp" fetchpriority="high">\n')
     out += header(True)
     out += f'''<main id="main">
 
 <section class="hero noise" id="top" aria-labelledby="hero-title">
   <div class="hero-bg" aria-hidden="true"><div class="grid-lines"></div><div class="blob blob--gold"></div><div class="blob blob--terra"></div><div class="blob blob--teal"></div></div>
   <div class="container hero-grid">
-    <div>
+    <div class="portrait" data-reveal="scale" style="--d:300ms">
+      <div class="portrait-ring" aria-hidden="true"></div>
+      <div class="portrait-frame">
+        <img src="img/omar-atta-portrait.webp" srcset="img/omar-atta-portrait-480.webp 360w, img/omar-atta-portrait-600.webp 600w, img/omar-atta-portrait.webp 720w" sizes="(max-width: 860px) 54vw, 440px" width="720" height="900" fetchpriority="high" decoding="async" alt="Portrait d’Omar Amadou Wankoye, développeur web freelance">
+      </div>
+      <span class="chip-float chip-float--1">{icon('chart-line')} SEO &amp; GEO</span>
+      <span class="chip-float chip-float--2">{icon('workflow')} n8n · Make · IA</span>
+      <span class="chip-float chip-float--3">{icon('smartphone')} Web &amp; mobile</span>
+    </div>
+    <div class="hero-copy">
       <p class="status-pill" data-reveal="fade"><span class="dot"></span>Disponible pour de nouveaux projets · réponse sous 48 h</p>
       <h1 class="split" id="hero-title">{h1}</h1>
       <p class="hero-rotator" data-reveal style="--d:500ms">Spécialiste <span class="rotator" aria-hidden="true">{rot}</span><span class="sr-only">création de sites web, applications, automatisation IA, SEO &amp; GEO et réseaux sociaux</span></p>
@@ -420,15 +467,6 @@ def build_index():
         <li>{icon('briefcase')} 12+ projets livrés</li>
         <li>{icon('globe')} France · Italie · Afrique · Remote</li>
       </ul>
-    </div>
-    <div class="portrait" data-reveal="scale" style="--d:300ms">
-      <div class="portrait-ring" aria-hidden="true"></div>
-      <div class="portrait-frame">
-        <img src="img/omar-atta-portrait.webp" srcset="img/omar-atta-portrait-480.webp 480w, img/omar-atta-portrait.webp 720w" sizes="(max-width: 860px) 78vw, 440px" width="720" height="900" fetchpriority="high" decoding="async" alt="Portrait d’Omar Amadou Wankoye, développeur web freelance">
-      </div>
-      <span class="chip-float chip-float--1">{icon('chart-line')} SEO &amp; GEO</span>
-      <span class="chip-float chip-float--2">{icon('workflow')} n8n · Make · IA</span>
-      <span class="chip-float chip-float--3">{icon('smartphone')} Web &amp; mobile</span>
     </div>
   </div>
   <div class="scroll-cue" aria-hidden="true">Défiler<i></i></div>
@@ -558,7 +596,7 @@ def build_index():
 </main>
 '''
     out += footer()
-    (ROOT / 'index.html').write_text(out, encoding='utf-8')
+    (ROOT / 'index.html').write_text(split_titles(out), encoding='utf-8')
 
 
 # ------------------------------------------------------------------ services
@@ -645,7 +683,7 @@ def build_services():
 </main>
 '''
         out += footer()
-        (ROOT / f'{s["slug"]}.html').write_text(out, encoding='utf-8')
+        (ROOT / f'{s["slug"]}.html').write_text(split_titles(out), encoding='utf-8')
 
 
 # ------------------------------------------------------------------ études de cas
@@ -730,7 +768,7 @@ def build_projects():
 </main>
 '''
         out += footer()
-        (ROOT / p['file']).write_text(out, encoding='utf-8')
+        (ROOT / p['file']).write_text(split_titles(out), encoding='utf-8')
 
 
 # ------------------------------------------------------------------ robots / sitemap / llms
@@ -785,6 +823,7 @@ def build_seo_files():
 
 if __name__ == '__main__':
     SPRITE = build_sprite()
+    INLINE_CSS = load_css()
     build_index()
     build_services()
     build_projects()
