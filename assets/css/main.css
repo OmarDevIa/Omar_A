@@ -325,6 +325,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
 .zone-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
 .zone-list li { display: inline-flex; align-items: center; gap: 7px; padding: 9px 14px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); font-size: .9rem; }
 .zone-list .icon { color: var(--gold); width: 16px; height: 16px; }
+.zone-list a { display: inline-flex; align-items: center; gap: 7px; text-decoration: underline; text-decoration-color: rgba(245,196,81,.5); text-underline-offset: 3px; }
+.zone-list a:hover { color: var(--gold); }
 
 /* ---------- FAQ ---------- */
 .faq { max-width: 860px; margin: 0 auto; display: grid; gap: 12px; }

@@ -13,7 +13,8 @@ from pathlib import Path
 HERE = Path(__file__).parent
 sys.path.insert(0, str(HERE))
 import content_data as C  # noqa: E402
-from projects_v2 import CATS, CATS_SHORT, PROJECTS  # noqa: E402
+from projects_v2 import CATS, CATS_SHORT, PROJECTS
+from landing_data import LANDINGS  # noqa: E402
 
 ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else HERE.parent
 SCRATCH = HERE.parent
@@ -263,13 +264,10 @@ def footer():
         </ul>
       </nav>
       <div>
-        <p class="footer-title">Explorer</p>
+        <p class="footer-title">Expertises</p>
         <ul>
-          <li><a href="index.html#projects">Projets</a></li>
-          <li><a href="index.html#certifications">Certifications</a></li>
-          <li><a href="index.html#faq">Questions fréquentes</a></li>
+{''.join(f'          <li><a href="{l["slug"]}.html">{e(l["h1"])}</a></li>' + chr(10) for l in LANDINGS)}          <li><a href="index.html#projects">Projets</a></li>
           <li><a href="cv.pdf" target="_blank">CV (PDF)</a></li>
-          <li><a href="{CREDLY}" target="_blank" rel="noopener">Profil Credly</a></li>
         </ul>
       </div>
       <div>
@@ -433,7 +431,10 @@ def build_index():
         <strong>{e(label)}</strong><span>{e(issuer)} · {issued[:4]}</span>
       </a>''' for label, issuer, bid, img, issued, order in C.CREDLY_BADGES)
 
-    zones_html = ''.join(f'<li>{icon("map-pin")}{e(a)}</li>' for a in AREAS)
+    zone_links = {'Niger': 'creation-site-web-niamey.html', 'Côte d’Ivoire': 'creation-site-web-abidjan.html'}
+    zones_html = ''.join(
+        (f'<li><a href="{zone_links[a]}">{icon("map-pin")}{e(a)}</a></li>' if a in zone_links else f'<li>{icon("map-pin")}{e(a)}</li>')
+        for a in AREAS)
     marquee = ''.join(f'<span>{e(t)}</span>' for t in STACK)
 
     out = head(C.PROFILE['seo_title'], C.PROFILE['seo_description'], f'{SITE}/', extra_ld=[faq_ld(C.GENERAL_FAQS)],
@@ -624,6 +625,9 @@ def build_services():
         crumbs = crumbs_ld([('Accueil', f'{SITE}/'), ('Services', f'{SITE}/#services'), (s['title'], url)])
         points = '\n'.join(f'        <li>{icon("check")}<span>{e(p)}</span></li>' for p in s['detail_points'].splitlines())
         others = '\n'.join(f'        <li><a href="{o["slug"]}.html">{icon(SERVICE_ICONS[o["slug"]])}{e(o["title"])}</a></li>' for o in SERVICES if o is not s)
+        spec = [l for l in LANDINGS if l['service'] == s['slug']]
+        if spec:
+            others = '\n'.join(f'        <li><a href="{l["slug"]}.html">{icon("sparkles")}{e(l["h1"])}</a></li>' for l in spec) + '\n' + others
         rel = SERVICE_PROJECTS[s['slug']]
         related = ''
         if rel:
@@ -684,6 +688,86 @@ def build_services():
 '''
         out += footer()
         (ROOT / f'{s["slug"]}.html').write_text(split_titles(out), encoding='utf-8')
+
+
+
+# ------------------------------------------------------------------ pages ciblées (longue traîne)
+def build_landings():
+    for l in LANDINGS:
+        url = f'{SITE}/{l["slug"]}.html'
+        parent = SVC[l['service']]
+        if l['area']:
+            area_ld = [{'@type': 'City', 'name': l['area']['name'],
+                        'containedInPlace': {'@type': 'Country', 'name': l['area']['country']}}]
+        else:
+            area_ld = [{'@type': 'Place', 'name': a} for a in AREAS]
+        service_ld = {'@context': 'https://schema.org', '@type': 'Service', 'name': l['h1'], 'serviceType': parent['title'],
+                      'description': l['desc'], 'url': url, 'provider': {'@id': f'{SITE}/#business'},
+                      'areaServed': area_ld, 'availableChannel': {'@type': 'ServiceChannel', 'serviceUrl': f'{SITE}/#contact'}}
+        crumbs = crumbs_ld([('Accueil', f'{SITE}/'), (parent['title'], service_url(parent)), (l['h1'], url)])
+        points = '\n'.join(f'        <li>{icon("check")}<span>{e(p)}</span></li>' for p in l['points'])
+        siblings = '\n'.join(f'        <li><a href="{o["slug"]}.html">{icon("sparkles")}{e(o["h1"])}</a></li>' for o in LANDINGS if o is not l)
+        cards = chr(10).join(project_card(PRJ[f]) for f in l['projects'])
+        h1 = split_words([(l['h1'], None)])
+        out = head(l['title'], l['desc'], url, extra_ld=[service_ld, faq_ld(l['faqs']), crumbs])
+        out += header(False)
+        out += f'''<main id="main">
+<section class="page-hero noise">
+  <div class="hero-bg" aria-hidden="true"><div class="grid-lines"></div><div class="blob blob--gold"></div></div>
+  <div class="container">
+    <nav aria-label="Fil d’Ariane"><ol class="breadcrumb"><li><a href="index.html">Accueil</a></li><li><a href="{parent['slug']}.html">{e(parent['title'])}</a></li><li aria-current="page">{e(l['h1'])}</li></ol></nav>
+    <p class="eyebrow" data-reveal="fade">{e(l['eyebrow'])}</p>
+    <h1 class="split">{h1}</h1>
+    <p class="lead" data-reveal style="--d:300ms">{e(l['lead'])}</p>
+    <div class="hero-actions" data-reveal style="--d:420ms;margin:0">
+      <a class="btn btn--primary" href="#contact" data-magnetic>Obtenir un devis gratuit {icon('arrow-right', 'icon icon--move')}</a>
+      <a class="btn btn--ghost" href="{WHATSAPP}" target="_blank" rel="noopener" data-magnetic>{icon('whatsapp')} WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container page-layout">
+    <article>
+      <div class="prose" data-reveal>
+        {l['body']}
+      </div>
+      <div class="related">
+        <h2>Réalisations</h2>
+        <div class="projects" data-stagger="80" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+{cards}
+        </div>
+      </div>
+      <div class="related" data-reveal>
+        <h2>Questions fréquentes</h2>
+        {faq_block(l['faqs'])}
+      </div>
+      <p class="updated">Mis à jour le {TODAY_FR} · Omar A. Wankoye, développeur web freelance certifié IBM &amp; Google.</p>
+    </article>
+    <aside class="card aside-card" data-reveal>
+      <h2>Ce que vous obtenez</h2>
+      <ul class="checks">
+{points}
+      </ul>
+      <a class="btn btn--primary btn--block" href="#contact">Obtenir un devis gratuit</a>
+      <a class="btn btn--whatsapp btn--block" href="{WHATSAPP}" target="_blank" rel="noopener">{icon('whatsapp')} Discuter sur WhatsApp</a>
+      <h2 style="margin-top:14px">Le service complet</h2>
+      <ul class="aside-links">
+        <li><a href="{parent['slug']}.html">{icon(SERVICE_ICONS[parent['slug']])}{e(parent['title'])}</a></li>
+      </ul>
+      <h2 style="margin-top:14px">Autres expertises</h2>
+      <ul class="aside-links">
+{siblings}
+      </ul>
+    </aside>
+  </div>
+</section>
+
+{contact_block()}
+</main>
+'''
+        out += footer()
+        (ROOT / f'{l["slug"]}.html').write_text(split_titles(out), encoding='utf-8')
 
 
 # ------------------------------------------------------------------ études de cas
@@ -786,6 +870,7 @@ def build_seo_files():
 
     urls = [(f'{SITE}/', '1.0', 'weekly', f'{SITE}/img/omar-atta-portrait.webp')]
     urls += [(service_url(s), '0.9', 'monthly', None) for s in SERVICES]
+    urls += [(f'{SITE}/{l["slug"]}.html', '0.8', 'monthly', None) for l in LANDINGS]
     urls += [(f'{SITE}/{p["file"]}', '0.7', 'yearly', f'{SITE}/img/projects/{p["slug"]}-full.webp') for p in PROJECTS]
     body = []
     for u, pr, cf, im in urls:
@@ -800,6 +885,8 @@ def build_seo_files():
          'certifié IBM (Full Stack Software Developer, AI Developer, Front-End Developer) et Google (AI Professional Certificate). '
          f'Il travaille à distance, en français et en anglais, pour des clients en : {", ".join(AREAS)}.', '', '## Services']
     L += [f'- [{s["title"]}]({service_url(s)}): {s["description"]}' for s in SERVICES]
+    L += ['', '## Expertises et zones']
+    L += [f'- [{l["h1"]}]({SITE}/{l["slug"]}.html): {l["desc"]}' for l in LANDINGS]
     L += ['', '## Certifications (vérifiables sur Credly)']
     L += [f'- [{n}]({u})' for n, _, u, _ in PRO_CERTS]
     L += [f'- [{label}]({C.credly_badge_url(bid)}) — {issuer}' for label, issuer, bid, *_ in C.CREDLY_BADGES]
@@ -826,6 +913,7 @@ if __name__ == '__main__':
     INLINE_CSS = load_css()
     build_index()
     build_services()
+    build_landings()
     build_projects()
     build_seo_files()
     print('ok')

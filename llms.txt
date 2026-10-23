@@ -11,6 +11,13 @@ Omar Amadou Wankoye (Omar A. Wankoye, également connu sous le nom d’Omar Atta
 - [Référencement SEO & GEO](https://www.omar-tech.com/seo-geo-referencement.html): Être trouvé sur Google et cité par les IA (ChatGPT, Gemini, Perplexity) : audit, SEO technique, contenus et SEO local.
 - [Gestion des réseaux sociaux](https://www.omar-tech.com/gestion-reseaux-sociaux.html): Stratégie, création de contenus assistée par IA et publication sur Facebook, Instagram, LinkedIn et TikTok pour développer votre audience.
 
+## Expertises et zones
+- [Création de site web à Niamey](https://www.omar-tech.com/creation-site-web-niamey.html): Développeur web freelance pour les entreprises de Niamey et du Niger : site vitrine, e-commerce avec Mobile Money, SEO local. Devis gratuit sous 48 h.
+- [Création de site web à Abidjan](https://www.omar-tech.com/creation-site-web-abidjan.html): Développeur web freelance pour les PME d’Abidjan et de Côte d’Ivoire : site vitrine, e-commerce, paiement mobile, SEO local. Devis gratuit sous 48 h.
+- [Automatisation n8n pour PME](https://www.omar-tech.com/automatisation-n8n-pme.html): Freelance n8n : automatisez devis, relances, CRM, e-mails et Google Sheets pour votre PME. Workflows sur mesure, IA intégrée, hébergement maîtrisé.
+- [Chatbot IA pour votre entreprise](https://www.omar-tech.com/chatbot-ia-entreprise.html): Création de chatbots IA sur mesure : support client 24/7, assistant interne sur vos documents (RAG), site web et WhatsApp. Freelance certifié IBM AI Developer.
+- [Développeur Django & Python freelance](https://www.omar-tech.com/developpeur-django-freelance.html): Développeur Django freelance certifié IBM Full Stack : applications web, back-offices, API REST, e-commerce et intégration IA. Remote France, Italie, Afrique.
+
 ## Certifications (vérifiables sur Credly)
 - [IBM Full Stack Software Developer](https://www.credly.com/badges/84bc6f03-87d3-4fc6-b3dd-c67a48f70d2a/public_url)
 - [IBM AI Developer](https://www.credly.com/badges/b5b05f89-e8e7-48a4-b96d-f73b05b33f1f/public_url)
