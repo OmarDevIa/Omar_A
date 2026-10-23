@@ -55,7 +55,7 @@ LANDINGS = [
             ('Comment être trouvé sur Google à Niamey ?',
              'En combinant un site bien structuré, des pages qui mentionnent votre activité et votre ville, une fiche Google Business Profile complète et des avis clients. Je mets en place ces éléments lors de la création du site.'),
         ],
-        'projects': ['cabinet.html', 'myshop.html', 'convinium.html'],
+        'projects': ['car-zone.html', 'cabinet.html', 'myshop.html'],
     },
     {
         'slug': 'creation-site-web-abidjan',

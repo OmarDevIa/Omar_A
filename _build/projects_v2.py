@@ -5,6 +5,22 @@ CATS_SHORT = {'web': 'Web', 'ia': 'IA', 'mobile': 'Mobile'}
 
 PROJECTS = [
     {
+        'file': 'car-zone.html', 'slug': 'car-zone', 'cat': 'web',
+        'title': 'Car Zone — vente de véhicules à Niamey',
+        'card': 'Site de vente de voitures : recherche multicritère, fiches véhicules détaillées, catalogue et espace client.',
+        'sector': 'Automobile', 'type': 'Intégration front-end',
+        'context': 'Une entreprise de vente de véhicules basée à Niamey voulait présenter son stock en ligne et permettre aux acheteurs de trouver rapidement la voiture qui leur correspond.',
+        'solution': [
+            'Page d’accueil avec carrousel et moteur de recherche multicritère : marque, modèle, lieu, année, type de véhicule et fourchette de prix.',
+            'Catalogue de véhicules et fiches détaillées : prix, kilométrage, carburant, boîte de vitesses, couleur et galerie photos.',
+            'Pages À propos, Services et Contact, avec coordonnées et horaires mis en avant.',
+            'Pages de connexion, d’inscription et tableau de bord client, design responsive Bootstrap, déployé sur Render.',
+        ],
+        'outcome': 'Une vitrine automobile professionnelle qui présente le stock et facilite la prise de contact, prête à être connectée à un back-office de gestion des annonces.',
+        'tech': ['HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Render'],
+        'url': 'https://car-ubiy.onrender.com/', 'services': ['creation-site-web'],
+    },
+    {
         'file': 'cabinet.html', 'slug': 'cabinet-medical', 'cat': 'web',
         'title': 'Cabinet médical — site & prise de rendez-vous',
         'card': 'Site moderne avec prise de rendez-vous en ligne et back-office autonome, optimisé pour le référencement local.',
@@ -192,5 +208,5 @@ PROJECTS = [
 
 
 _ORDER = ['cabinet-medical', 'suptech-chatbot', 'myshop', 'chatbot-rag', 'legendes-images-ia', 'application-mobile-ia',
-          'ocart', 'convinium', 'shopgrids', 'veppo', 'restaurant', 'burger-house']
+          'car-zone', 'ocart', 'convinium', 'shopgrids', 'veppo', 'restaurant', 'burger-house']
 PROJECTS.sort(key=lambda p: _ORDER.index(p['slug']))

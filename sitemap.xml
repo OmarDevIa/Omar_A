@@ -110,6 +110,13 @@
     <image:image><image:loc>https://www.omar-tech.com/img/projects/application-mobile-ia-full.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://www.omar-tech.com/car-zone.html</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image><image:loc>https://www.omar-tech.com/img/projects/car-zone-full.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://www.omar-tech.com/ocart.html</loc>
     <lastmod>2026-10-23</lastmod>
     <changefreq>yearly</changefreq>

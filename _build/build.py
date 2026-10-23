@@ -544,7 +544,7 @@ def build_index():
     <div class="section-head" data-reveal>
       <p class="eyebrow">Réalisations</p>
       <h2 class="section-title" id="projects-title">Des projets <span class="serif grad-text">concrets</span>, en ligne.</h2>
-      <p class="section-lead">Sites, e-commerce, applications et chatbots IA livrés pour des restaurants, la santé, l’éducation, l’édition et le commerce.</p>
+      <p class="section-lead">Sites, e-commerce, applications et chatbots IA livrés pour des restaurants, la santé, l’éducation, l’édition, l’automobile et le commerce.</p>
     </div>
     <div class="filters" role="group" aria-label="Filtrer les projets">{filters}</div>
     <div class="projects" data-stagger="70">
